@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Preview</title>
 </head>
-<body>
-    <h2>Hello, <span id="previewName"></span>!</h2>
+<style>
+  /* CSS Stylesheet */
+  @keyframes rainbow {
+    0% { color: red; }
+    16.666% { color: orange; }
+    33.333% { color: yellow; }
+    50% { color: green; }
+    66.666% { color: blue; }
+    83.333% { color: indigo; }
+    100% { color: violet; }
+  }
+
+  .rainbow-text {
+    animation: rainbow 2s infinite; /* Change '2s' to adjust the duration of the animation */
+  }
+</style><body>
+    <h2 class="rainbow-text">Hello, <span id="previewName"></span>!</h2>
     <script>
         // Retrieve the name from the URL query parameters
         const params = new URLSearchParams(window.location.search);
